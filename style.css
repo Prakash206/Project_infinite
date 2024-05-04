@@ -1,0 +1,653 @@
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            overflow-x: hidden;
+            height: 100vh;
+            width: 100%;
+        }
+        .top_img{
+            mix-blend-mode: color-burn;
+            background-color: red;
+        }
+        .preloader{
+            display: none;
+            width: 60px;
+            height: 60px;
+            background: #fff url(Rhombus.gif);
+            position: absolute;
+            top: 60%;
+            left: 60%;
+            /* transform: translate(-50%,-50%); */
+            z-index: 100;
+            mix-blend-mode: multiply;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1;
+            width: 100%;
+            height: 15%;
+            background-color: aliceblue;
+            box-shadow: 0px 1px 15px black;
+            transition: all 0.5s;
+        }
+      
+        .food_logo {
+            margin-top: 5px;
+            margin-left: 10px;
+            width: 60px;
+            aspect-ratio: 1/1;
+            mix-blend-mode: multiply;
+                        
+        }
+        .navigation{
+            position: relative;
+        }
+        .navigation ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            color: green;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            padding-bottom: 37px;
+            transition: all 1ms;
+
+        }
+        
+        .navigation li a:hover  {
+            color: black;
+            border-bottom: 2px solid blueviolet;
+
+        }
+        .navigation ul li:hover .sidebar{
+            display: block;
+        }
+        .navigation .sidebar{
+            display: none;
+            width: 30%;
+            height: 22vh;
+            position: absolute;
+            background-color: aliceblue;
+            left: 35%;
+            top: 100%;
+            transition: all 1s;
+        }
+        .sidebar ul{
+            display: block;
+        }
+        .sidebar ul li{
+            padding-top: 10px;
+        }
+        
+
+        .sidebar a{
+            padding-bottom: 5px;
+        }
+       
+        .mainlogin_logout{
+            position: absolute;
+            display: none;
+            z-index: 2;
+            height: 50%;
+            width: 50%;
+            /* background-color: blue; */
+            background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(13, 81, 170, 0.8));
+            right: 28%;
+            top: 0;
+
+        }
+        
+        .login_logout{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            /* background-color: blue; */
+        }
+        .login_logout span button a{
+            text-decoration: none;
+        }
+        .login_logout span button {
+            padding: 10px;
+            background-color: blanchedalmond;
+            border: none;
+            border-radius: 8px;
+            margin: 5px;
+        }
+        .up_bar1,.up_bar2{
+
+            font-size: 30px;
+        }
+
+        .up_bar2{
+            position: absolute;
+            top: 0;
+            right: 1%;
+            
+        }
+        .up_bar2 .fa-xmark,.up_bar1 .fa-bars{
+            color: red;
+        }
+
+        
+        .section1 {
+            height: 90vh;
+            width: 100%;
+            background-color: #f1f1f1;
+
+        }
+        .main_left_right_container{
+            display: flex;
+            height: 100%;
+            width: 100%;
+            background-color: #f1f1f1;
+
+
+        }
+        .left_container, .right_container,.right_container_2{
+            margin-top: 10%;
+            height: 60%;
+            
+        }
+        .left_container{
+            background-color: white;
+            background-color: #f1f1f1;
+        }
+        .left_container{
+            margin-left: 10%;
+
+        }
+
+        .left_container .text_container div h3{
+            font-size: 40px;
+            letter-spacing: 0.5px;
+            color: cornflowerblue;
+            
+        }
+        .left_container .text_container .typing{
+            width: 750px;
+        }
+
+        .left_container .text_container .typing p{
+            margin-top: 5%;
+            font-size: 20px;
+            border-right: 3px solid orange;
+            color: #888;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: Prakash 5s steps(60, end) infinite, Pradip 3s infinite;
+        }
+        @keyframes Prakash{
+            from{width: 0%;}
+
+            to{width: 35% }
+        }
+        @keyframes Pradip{
+            form,to{
+                border: transparent;
+            }
+            30%{
+                border-color: blueviolet;
+            }
+        }
+
+
+        .left_container .button_container button,
+         .right_container .inner_right_container button,
+         .right_container_2 .next_inner_right_container .next_inner_right_container_2 button{
+            margin-top: 10%;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: blueviolet;
+            font-weight: bolder;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            
+        }
+        .left_container .button_container button {
+            margin-top: 5%;
+        }
+
+        .left_container .button_container #Measure_bmi::before{
+            content: " ";
+            background-color: aquamarine;
+            transition: 0.8s;
+            width: 0%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            position: absolute;
+            
+        }
+        .left_container .button_container #Measure_bmi:hover::before{
+            width: 100%;
+
+        }
+
+
+
+       
+        .left_container .text_container .style_1{
+            color: greenyellow;
+        }
+    
+     
+
+        .right_container{
+            display: none;
+            background-color: rgb(132, 175, 68);
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            width: 30%;
+            position: absolute;
+            margin-left: 50%;
+
+            
+        }
+        .right_container_2{
+            display: none;
+            background-color: rgb(154, 68, 68);
+            width: 30%;
+            position: absolute;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            margin-left: 50%;
+
+        }
+        .right_container .close,
+        .right_container_2 .close{
+            position: absolute;
+            top: 1%;
+            color: white;
+            cursor: pointer;
+            transition: all 2s;
+
+        }
+        .right_container .close{
+            right: 1%;
+        }
+        .right_container_2 .close{
+            left: 1%;
+        }
+
+        .inner_right_container, .next_inner_right_container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+      
+        .right_container .inner_right_container .inner_right_container_2,
+            .right_container_2 .next_inner_right_container .next_inner_right_container_2{
+
+            margin-top: 10%;
+
+        }
+        
+        .right_container .inner_right_container .inner_right_container_2 .style_1{
+            color: darkred;
+        }
+        .right_container .inner_right_container .inner_right_container_2 input,
+        .right_container_2 .next_inner_right_container .next_inner_right_container_2 input{
+            border-radius: 5px;
+            padding: 5px;
+            border: none;
+            text-align: center;
+            width: 100%;
+            
+        }
+        .next_inner_right_container_2{
+            color: white;
+
+        }
+        .right_container_2 .next_inner_right_container .next_inner_right_container_2 input{
+            text-align: left;
+        }
+
+      
+
+        .right_container .inner_right_container .inner_right_container_2 h1{
+            text-align: center;
+            color: midnightblue;
+            opacity: 5;
+            margin-bottom: 5%;
+            letter-spacing: 0.5px;
+
+        }
+
+        .right_container .inner_right_container .inner_right_container_2 button,
+        .right_container_2 .next_inner_right_container .next_inner_right_container_2 button{
+            width: 100%;
+        }
+        .right_container_2 .next_inner_right_container .next_inner_right_container_2 div label{
+            margin-left: 40%;
+
+        }
+        .inner_right_container_2 input,.next_inner_right_container_2 input{
+            outline: none;
+        }
+
+        
+      
+        #result{
+            position: relative;
+            top: 5%;
+
+        }
+
+
+
+
+        .section2 {
+            position: relative;
+            background-color: #f1f1f1;
+            /* background-color: red; */
+            height: 110vh;
+        }
+        .noresult_typing{
+            width: 100px;
+        }
+        .no_result {
+            display: none;
+            position: absolute;
+            color: red;           
+           left: 50%;
+           top: 65%;
+           transform: translate(-50%,-50%);
+           animation: noresult 2s;
+           transform: scale(1.5);
+        }
+        @keyframes noresult{
+            0%{
+                transform: scale(4);
+            }
+        
+            
+            100%{
+               transform: scale(1.5);
+            }
+            
+        }
+       
+
+
+        /* search bar styles */
+    
+        .container_fluid .new_container .search {
+            display: flex;
+            justify-content: space-evenly;
+            /* problem when i set margin-top: 5%; instead of padding-top: 5%; */
+            padding-top: 5%;
+            /* background-color: blue; */
+
+        }
+
+        .container_fluid .new_container .search h1 {
+            color: green;
+            border-bottom: 3px solid teal;
+            letter-spacing: 2px;
+        }
+
+        .container_fluid .new_container .search input {
+            font-size: 15px;
+            color: rgb(9, 148, 255);
+            border-radius: 10px;
+            width: 30%;
+
+        }
+
+        .container_fluid .new_container .search input::placeholder {
+            font-size: 15px;
+            color: blue;
+            letter-spacing: 3px;
+            padding-left: 10px;
+
+        }
+
+
+        .new_container .product_list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .new_container .product_list .product {
+            width: 18%;
+            margin-left: 5%;
+            margin-bottom: 5%;
+            margin-top: 30px;
+        }
+
+        .new_container .product_list .product h3 {
+            padding-top: 5px;
+            letter-spacing: 2px;
+        }
+        /* .new_container .product_list .product h3, .container .product_list .product h4 {
+          text-align: center;
+        } */
+        .new_container .product_list .product h4 {
+            color: green;
+
+        }
+        .new_container .product_list .product h4 del{
+            color: red;
+
+        }
+        .new_container .product_list .product img{
+            width: 200px;
+        }
+
+        /* //section3--styling// */
+        .section3{
+            background-color: red;
+            height: 35vh;
+            width: 100%;
+        }
+        .section3_container{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(228, 235, 240);
+            
+        }
+        
+
+        .first_container, .second_container,.third_container{
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .fitbody_img{
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-top: 2.5%;
+            margin-left: 2.5%;
+            mix-blend-mode: multiply;
+            aspect-ratio: 3/2;
+            object-fit: fill;
+        }
+        /* //section4 part */
+        .section4{
+            width: 100%;
+            height: 120h;
+            background-color: #f1f1f1;
+
+        }
+        .section4_container{
+            width: 100%;
+            height: 100%;
+            background-color: #f1f1f1;
+            padding-top: 2%;
+
+        }
+        .first_section4_container,
+         .second_section4_container, 
+         .third_section4_container{
+            height: 40vh;
+            position: relative;
+            width: 100%;
+        }
+        .first_section4_container{
+            /* background-color: blue; */
+
+        }
+        .second_section4_container{
+            /* background-color: aqua; */
+            position: relative;
+            right: 0;
+
+        }
+        .third_section4_container{
+            /* background-color: green; */
+
+        }
+
+
+
+        .inner_first1_section4_container,
+        .inner_second1_section4_container,
+        .inner_third1_section4_container{
+            height: 85%;
+            width: 25%;
+            background-color: greenyellow;
+        }
+    
+        .inner_second1_section4_container{
+            position: absolute;
+            right: 0;
+        }
+
+
+        .inner_first2_section4_container,
+        .inner_second2_section4_container,
+        .inner_third2_section4_container{
+            background-color: aliceblue;
+            position: absolute;
+            top: 20%;
+            height: 65%;
+            width: 40%;      
+           
+        }
+      
+
+        .inner_first2_section4_container h4,
+        .inner_second2_section4_container h4,
+        .inner_third2_section4_container h4{
+            display: flex;
+            justify-content: center;
+
+        }
+        .inner_second2_section4_container p{
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        .inner_first2_section4_container,
+        .inner_third2_section4_container{
+            border-top-right-radius: 250px;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+            margin-left: 25%;
+        }
+
+        .inner_second2_section4_container{
+            border-top-left-radius: 250px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            right: 25%;
+        }
+        .doctor_image_1,
+        .doctor_image_2,
+        .doctor_image_3{
+            width: 330px;
+            overflow: hidden;           
+            /* mix-blend-mode: color-burn; */
+            aspect-ratio: 3/2;
+            object-fit: fill;
+        }
+        .doctor_image_2{
+            margin-left: 1.6%;
+
+}
+
+        /* footer part */
+        footer {
+            background-color: #f1f1f1;
+            width: 100%;
+            height: 60vh;
+            position: relative;
+            border-top: 1px solid white;
+        }
+        .main_footer{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 80%;
+            width: 100%;
+
+        }
+        
+        .inner_footer{
+            padding: 8px;
+            /* margin-top: 5px; */
+            
+            
+        }
+        .inner_footer>a{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #888;
+            padding-top: 6px;
+        }
+        .social_media{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            padding: 6px;
+
+        }
+        .social_media2>span{
+            padding-left: 12px;
+
+            
+        }
+        i{
+            color: #888;
+            cursor: pointer;
+            transition: all 1s;
+        }
+        i:hover{
+            transform: scale(1.5);
+        }
+        #media:hover{
+            color: rgb(67, 67, 177);
+        }
+        #instagram:hover{
+            color: rgb(250, 10, 90);
+        }
+        
+        
+     
+    
